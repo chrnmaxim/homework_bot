@@ -12,7 +12,7 @@
 * при обновлении статуса анализирует ответ API и отправляет соответствующее уведомление в Telegram;
 * логирует свою работу и сообщает о важных проблемах сообщением в Telegram.
 
-### Технологии
+### Технологии:
 * Python 3.11
 * python-dotenv 0.19.0
 * python-telegram-bot 13.7
@@ -39,11 +39,11 @@ python -m pip install --upgrade pip
 ```
 pip install -r requirements.txt
 ``` 
-Запуск персонального бота:
+Запуск **персонального бота**:
 ```
 python homework.py
 ```
-Запуск общего бота*:
+Запуск **общего бота***:
 ```
 python homework_for_all.py
 ```
@@ -61,7 +61,7 @@ TELEGRAM_CHAT_ID = id чата
 
 **TELEGRAM_TOKEN** - API токен личного бота необходимо получить у телеграм-бота [BotFather](https://t.me/BotFather).
 
-**TELEGRAM_CHAT_ID** - id чата получаем путем отправки сообщения в телеграм-бота [userinfobot](https://t.me/userinfobot)
+**TELEGRAM_CHAT_ID** - id чата получаем путем отправки сообщения в телеграм-бота [userinfobot](https://t.me/userinfobot).
 
 ---
 
