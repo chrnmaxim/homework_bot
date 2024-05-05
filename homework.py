@@ -75,13 +75,13 @@ def get_api_answer(timestamp: int) -> dict:
         raise Exception(f'Сбой при запросе к API: {error}')
     if response.status_code != HTTPStatus.OK:
         error_message = (
-            f'Ошибка ответа API. Полученный статус:{response.status_code}.'
+            f'Ошибка ответа API. Полученный статус: {response.status_code}.'
         )
-        raise Exception(error_message)
+        raise requests.RequestException(error_message)
     try:
         return response.json()
-    except json.decoder.JSONDecodeError as error:
-        raise Exception(f'Полученный JSON не валиден: {error}')
+    except json.decoder.JSONDecodeError:
+        raise json.decoder.JSONDecodeError('Полученный JSON не валиден.')
 
 
 def check_response(response: dict) -> dict:
