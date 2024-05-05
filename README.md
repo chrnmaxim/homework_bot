@@ -25,7 +25,7 @@ python -m venv venv
 ```
 Активировать виртуальное окружениe:
 ```
-. venv/bin/activate
+. venv/Scripts/activate
 ```
 Обновить менеджер пакетов pip:
 ```
