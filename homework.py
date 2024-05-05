@@ -20,6 +20,7 @@ TELEGRAM_TOKEN: str = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID: str = os.getenv('TELEGRAM_CHAT_ID')
 
 RETRY_PERIOD: int = 600
+TIMESTAMP_DELTA: int = 30
 
 ENDPOINT: str = 'https://practicum.yandex.ru/api/user_api/homework_statuses/'
 HEADERS: dict[str, str] = {'Authorization': f'OAuth {PRACTICUM_TOKEN}'}
@@ -148,7 +149,7 @@ def main() -> None:
         raise EnvVarException(error_message)
 
     bot = Bot(token=TELEGRAM_TOKEN)
-    current_timestamp = int(time.time()) - 20
+    current_timestamp = int(time.time()) - TIMESTAMP_DELTA
 
     prev_error: str = ''
 
